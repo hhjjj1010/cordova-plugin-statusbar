@@ -33,13 +33,9 @@ description: Control the device status bar.
 
 This installation method requires cordova 5.0+
 
-    cordova plugin add cordova-plugin-statusbar
-Older versions of cordova can still install via the __deprecated__ id
+install via repo url directly ( unstable )
 
-    cordova plugin add org.apache.cordova.statusbar
-It is also possible to install via repo url directly ( unstable )
-
-    cordova plugin add https://github.com/apache/cordova-plugin-statusbar.git
+    cordova plugin add https://github.com/hhjjj1010/cordova-plugin-statusbar.git
 
 
 Preferences
