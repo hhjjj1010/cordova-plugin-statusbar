@@ -119,6 +119,7 @@ Although in the global scope, it is not available until after the `deviceready` 
 - StatusBar.backgroundColorByHexString
 - StatusBar.hide
 - StatusBar.show
+- StatusBar.getStatusBarHeight
 
 Properties
 --------
@@ -304,6 +305,21 @@ Supported Platforms
 - Windows Phone 8
 - Windows Phone 8.1
 
+StatusBar.getStatusBarHeight
+=================
+
+Get the statusbar's height.
+
+    StatusBar.getStatusBarHeight(function (height) {
+        // TODO
+    });
+
+
+Supported Platforms
+-------------------
+
+- iOS
+- Android
 
 StatusBar.isVisible
 =================

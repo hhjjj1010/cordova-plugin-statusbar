@@ -203,6 +203,20 @@ public class StatusBar extends CordovaPlugin {
             return true;
         }
 
+        if ("getStatusBarHeight".equals(action)) {
+            int height = 0;
+
+            int resourceId = cordova.getContext().getResources().getIdentifier("status_bar_height", "dimen", "android");
+            if (resourceId > 0) {
+                height = cordova.getContext().getResources().getDimensionPixelSize(resourceId);
+                float scale = cordova.getContext().getResources().getDisplayMetrics().density;
+                height = (int) (height / scale + 0.5f);
+            }
+
+            callbackContext.success(height);
+            return true;
+        }
+
         return false;
     }
 

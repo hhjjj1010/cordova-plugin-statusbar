@@ -461,6 +461,12 @@ static const void *kStatusBarStyle = &kStatusBarStyle;
     
 }
 
+- (void)getStatusBarHeight:(CDVInvokedUrlCommand *)command {
+    CGRect statusBarFrame = [UIApplication sharedApplication].statusBarFrame;
+    CDVPluginResult *result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsNSInteger:statusBarFrame.size.height];
+    [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
+}
+
 - (void) dealloc
 {
     [[UIApplication sharedApplication] removeObserver:self forKeyPath:@"statusBarHidden"];
